@@ -20,6 +20,7 @@
 					<Add option="-DBUILD_DLL" />
 					<Add option="-DUNICODE" />
 					<Add directory="src" />
+					<Add directory="common" />
 				</Compiler>
 				<Linker>
 					<Add library="user32" />
@@ -38,6 +39,7 @@
 					<Add option="-DBUILD_DLL" />
 					<Add option="-DUNICODE" />
 					<Add directory="src" />
+					<Add directory="common" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -45,13 +47,13 @@
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="src/Notepad_plus_msgs.h" />
+		<Unit filename="common/Notepad_plus_msgs.h" />
+		<Unit filename="common/PluginInterface.h" />
+		<Unit filename="common/Scintilla.h" />
+		<Unit filename="common/menuCmdID.h" />
 		<Unit filename="src/PluginDefinition.cpp" />
 		<Unit filename="src/PluginDefinition.h" />
-		<Unit filename="src/PluginInterface.h" />
-		<Unit filename="src/Scintilla.h" />
 		<Unit filename="src/main.cpp" />
-		<Unit filename="src/menuCmdID.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
