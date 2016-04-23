@@ -19,6 +19,8 @@
 #include "menuCmdID.h"
 #include "UIControls.h"
 
+#include <winnt.h>
+
 /* global values */
 HANDLE				g_hModule			= NULL;
 
@@ -65,9 +67,9 @@ void commandMenuInit()
     //            ShortcutKey *shortcut,          // optional. Define a shortcut to trigger this command
     //            bool check0nInit                // optional. Make this menu item be checked visually
     //            );
-    setCommand(0, TEXT("Hello Notepad++"), hello, NULL, false);
-    setCommand(1, TEXT("Hello (with dialog)"), helloDlg, NULL, false);
-    setCommand(2, TEXT("UI Controls Dialog"), testDlg, NULL, false);
+    setCommand(0, _T("Hello Notepad++"), hello, NULL, false);
+    setCommand(1, _T("Hello (with dialog)"), helloDlg, NULL, false);
+    setCommand(2, _T("UI Controls Dialog"), testDlg, NULL, false);
 }
 
 //
@@ -120,7 +122,7 @@ void hello()
 
 void helloDlg()
 {
-    ::MessageBox(NULL, TEXT("Hello, Notepad++!"), TEXT("Notepad++ Plugin Template"), MB_OK);
+    ::MessageBox(NULL, _T("你好, Notepad++!"), _T("Notepad++ 插件模板 @山庄来客"), MB_OK);
 }
 
 void testDlg()

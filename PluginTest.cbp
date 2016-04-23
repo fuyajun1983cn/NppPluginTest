@@ -19,16 +19,30 @@
 					<Add option="-g" />
 					<Add option="-DBUILD_DLL" />
 					<Add option="-DUNICODE" />
-					<Add directory="src" />
-					<Add directory="common" />
-					<Add directory="include" />
 					<Add directory="res" />
+					<Add directory="include" />
+					<Add directory="src" />
+					<Add directory="PowerEditor/src" />
+					<Add directory="PowerEditor/src/MISC/Common" />
+					<Add directory="PowerEditor/src/MISC/PluginsManager" />
+					<Add directory="PowerEditor/src/ScitillaComponent" />
+					<Add directory="PowerEditor/src/TinyXml" />
+					<Add directory="PowerEditor/src/TinyXml/tinyXmlA" />
+					<Add directory="PowerEditor/src/WinControls" />
+					<Add directory="PowerEditor/src/WinControls/AboutDlg" />
+					<Add directory="PowerEditor/src/WinControls/ContextMenu" />
+					<Add directory="PowerEditor/src/WinControls/DockingWnd" />
+					<Add directory="PowerEditor/src/WinControls/ImageListSet" />
+					<Add directory="PowerEditor/src/WinControls/shortcut" />
+					<Add directory="PowerEditor/src/WinControls/StaticDialog" />
+					<Add directory="PowerEditor/src/WinControls/ToolBar" />
+					<Add directory="scintilla/include" />
 				</Compiler>
 				<Linker>
-						<Add library="gdi32" />
-						<Add library="user32" />
-						<Add library="kernel32" />
-						<Add library="comctl32" />
+					<Add library="gdi32" />
+					<Add library="user32" />
+					<Add library="kernel32" />
+					<Add library="comctl32" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -43,9 +57,23 @@
 					<Add option="-Wall" />
 					<Add option="-DBUILD_DLL" />
 					<Add option="-DUNICODE" />
-					<Add directory="src" />
-					<Add directory="common" />
 					<Add directory="include" />
+					<Add directory="src" />
+					<Add directory="PowerEditor/src" />
+					<Add directory="PowerEditor/src/MISC/Common" />
+					<Add directory="PowerEditor/src/MISC/PluginsManager" />
+					<Add directory="PowerEditor/src/ScitillaComponent" />
+					<Add directory="PowerEditor/src/TinyXml" />
+					<Add directory="PowerEditor/src/TinyXml/tinyXmlA" />
+					<Add directory="PowerEditor/src/WinControls" />
+					<Add directory="PowerEditor/src/WinControls/AboutDlg" />
+					<Add directory="PowerEditor/src/WinControls/ContextMenu" />
+					<Add directory="PowerEditor/src/WinControls/DockingWnd" />
+					<Add directory="PowerEditor/src/WinControls/ImageListSet" />
+					<Add directory="PowerEditor/src/WinControls/shortcut" />
+					<Add directory="PowerEditor/src/WinControls/StaticDialog" />
+					<Add directory="PowerEditor/src/WinControls/ToolBar" />
+					<Add directory="scintilla/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -56,19 +84,19 @@
 				</Linker>
 			</Target>
 		</Build>
-		<Unit filename="common/Notepad_plus_msgs.h" />
-		<Unit filename="common/PluginInterface.h" />
-		<Unit filename="common/Scintilla.h" />
-		<Unit filename="common/menuCmdID.h" />
+		<Unit filename="PowerEditor/src/MISC/PluginsManager/Notepad_plus_msgs.h" />
+		<Unit filename="PowerEditor/src/MISC/PluginsManager/PluginInterface.h" />
+		<Unit filename="PowerEditor/src/menuCmdID.h" />
 		<Unit filename="include/UIControls.h" />
+		<Unit filename="res/UIControls.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="res/resource.h" />
+		<Unit filename="scintilla/include/Scintilla.h" />
 		<Unit filename="src/PluginDefinition.cpp" />
 		<Unit filename="src/PluginDefinition.h" />
 		<Unit filename="src/UIControls.cpp" />
 		<Unit filename="src/main.cpp" />
-		<Unit filename="res/resource.h" />
-		<Unit filename="res/UIControls.rc">
-			<Option compilerVar="WINDRES" />
-		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

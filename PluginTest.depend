@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1461157883 source:d:\projects\nppplugintest\res\uicontrols.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resource.h"
+
+1461157883 d:\projects\nppplugintest\res\resource.h
+
+1461158753 source:d:\projects\nppplugintest\src\main.cpp
+	"PluginDefinition.h"
+
+1461414253 d:\projects\nppplugintest\src\plugindefinition.h
+	"PluginInterface.h"
+
+1461412671 d:\projects\nppplugintest\powereditor\src\misc\pluginsmanager\plugininterface.h
+	"Scintilla.h"
+	"Notepad_plus_msgs.h"
+
+1451820396 d:\projects\nppplugintest\scintilla\include\scintilla.h
+	<basetsd.h>
+
+1451820396 d:\projects\nppplugintest\powereditor\src\misc\pluginsmanager\notepad_plus_msgs.h
+	<windows.h>
+	<tchar.h>
+
+1461158825 source:d:\projects\nppplugintest\src\uicontrols.cpp
+	"UIControls.h"
+	"resource.h"
+
+1461403931 d:\projects\nppplugintest\include\uicontrols.h
+	"windows.h"
+
+1461414430 source:d:\projects\nppplugintest\src\plugindefinition.cpp
+	"PluginDefinition.h"
+	"menuCmdID.h"
+	"UIControls.h"
+	<winnt.h>
+
+1451820396 d:\projects\nppplugintest\powereditor\src\menucmdid.h
+

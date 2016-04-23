@@ -27,8 +27,9 @@
 //-- STEP 1. DEFINE YOUR PLUGIN NAME --//
 //-------------------------------------//
 // Here define your plugin name
+
 //
-const TCHAR NPP_PLUGIN_NAME[] = TEXT("Notepad++ plugin template");
+const TCHAR NPP_PLUGIN_NAME[] = _T("Notepad++²å¼þÄ£°å");
 
 //-----------------------------------------------//
 //-- STEP 2. DEFINE YOUR PLUGIN COMMAND NUMBER --//
