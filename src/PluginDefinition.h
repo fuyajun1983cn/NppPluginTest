@@ -36,7 +36,7 @@ const TCHAR NPP_PLUGIN_NAME[] = TEXT("Notepad++ plugin template");
 //
 // Here define the number of your plugin commands
 //
-const int nbFunc = 2;
+const int nbFunc = 3;
 
 
 //
@@ -62,15 +62,17 @@ void commandMenuInit();
 void commandMenuCleanUp();
 
 //
-// Function which sets your command 
+// Function which sets your command
 //
 bool setCommand(size_t index, TCHAR *cmdName, PFUNCPLUGINCMD pFunc, ShortcutKey *sk = NULL, bool check0nInit = false);
 
 
+extern HANDLE g_hModule;
 //
 // Your plugin command functions
 //
 void hello();
 void helloDlg();
+void testDlg();
 
 #endif //PLUGINDEFINITION_H

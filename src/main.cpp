@@ -27,6 +27,7 @@ extern "C" __declspec(dllexport) BOOL APIENTRY DllMain(HINSTANCE hModule,
                                                        DWORD fdwReason,
                                                        LPVOID lpvReserved)
 {
+    g_hModule = hModule;
     switch (fdwReason)
     {
         case DLL_PROCESS_ATTACH:

@@ -21,9 +21,14 @@
 					<Add option="-DUNICODE" />
 					<Add directory="src" />
 					<Add directory="common" />
+					<Add directory="include" />
+					<Add directory="res" />
 				</Compiler>
 				<Linker>
-					<Add library="user32" />
+						<Add library="gdi32" />
+						<Add library="user32" />
+						<Add library="kernel32" />
+						<Add library="comctl32" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -40,10 +45,14 @@
 					<Add option="-DUNICODE" />
 					<Add directory="src" />
 					<Add directory="common" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="gdi32" />
 					<Add library="user32" />
+					<Add library="kernel32" />
+					<Add library="comctl32" />
 				</Linker>
 			</Target>
 		</Build>
@@ -51,9 +60,15 @@
 		<Unit filename="common/PluginInterface.h" />
 		<Unit filename="common/Scintilla.h" />
 		<Unit filename="common/menuCmdID.h" />
+		<Unit filename="include/UIControls.h" />
 		<Unit filename="src/PluginDefinition.cpp" />
 		<Unit filename="src/PluginDefinition.h" />
+		<Unit filename="src/UIControls.cpp" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="res/resource.h" />
+		<Unit filename="res/UIControls.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

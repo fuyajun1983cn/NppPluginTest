@@ -17,6 +17,10 @@
 
 #include "PluginDefinition.h"
 #include "menuCmdID.h"
+#include "UIControls.h"
+
+/* global values */
+HANDLE				g_hModule			= NULL;
 
 //
 // The plugin data that Notepad++ needs
@@ -27,6 +31,9 @@ FuncItem funcItem[nbFunc];
 // The data of Notepad++ that you can use in your plugin commands
 //
 NppData nppData;
+
+//UI Controls Dialog
+UIControlsDialog		g_testDlg;
 
 //
 // Initialize your plugin data here
@@ -60,6 +67,7 @@ void commandMenuInit()
     //            );
     setCommand(0, TEXT("Hello Notepad++"), hello, NULL, false);
     setCommand(1, TEXT("Hello (with dialog)"), helloDlg, NULL, false);
+    setCommand(2, TEXT("UI Controls Dialog"), testDlg, NULL, false);
 }
 
 //
@@ -113,4 +121,9 @@ void hello()
 void helloDlg()
 {
     ::MessageBox(NULL, TEXT("Hello, Notepad++!"), TEXT("Notepad++ Plugin Template"), MB_OK);
+}
+
+void testDlg()
+{
+    g_testDlg.doModal(&nppData,  NULL);
 }
