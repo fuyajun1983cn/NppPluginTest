@@ -42,9 +42,9 @@ BOOL UIControlsDialog::run_dlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARA
 		{
 			switch(LOWORD(wParam))
 			{
-				case IDOK:
+				case IDC_OK:
 
-				case IDCANCEL:
+				case IDC_CANCEL:
 					::EndDialog(hWnd, 0);
 			}
 			return TRUE;

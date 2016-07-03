@@ -18,6 +18,8 @@
 #include "PluginDefinition.h"
 #include "menuCmdID.h"
 #include "UIControls.h"
+#include "ConfigDialog.h"
+#include "FindDlg.h"
 
 #include <winnt.h>
 
@@ -37,11 +39,18 @@ NppData nppData;
 //UI Controls Dialog
 UIControlsDialog		g_testDlg;
 
+//Configuration Dialog
+ConfigDialog g_configDlg ;
+
+//Find(Docking) Dialog
+FindDlg g_findDlg;
+
 //
 // Initialize your plugin data here
 // It will be called while plugin loading
 void pluginInit(HANDLE hModule)
 {
+    g_hModule = hModule;
 }
 
 //
@@ -49,6 +58,7 @@ void pluginInit(HANDLE hModule)
 //
 void pluginCleanUp()
 {
+    g_hModule = nullptr;
 }
 
 //
@@ -67,9 +77,11 @@ void commandMenuInit()
     //            ShortcutKey *shortcut,          // optional. Define a shortcut to trigger this command
     //            bool check0nInit                // optional. Make this menu item be checked visually
     //            );
-    setCommand(0, _T("Hello Notepad++"), hello, NULL, false);
-    setCommand(1, _T("Hello (with dialog)"), helloDlg, NULL, false);
-    setCommand(2, _T("UI Controls Dialog"), testDlg, NULL, false);
+    setCommand(0, _T("Hello Notepad++"), hello, nullptr, false);
+    setCommand(1, _T("Hello (with dialog)"), helloDlg, nullptr, false);
+    setCommand(2, _T("UI Controls Dialog"), testDlg, nullptr, false);
+    setCommand(3, _T("Configuration Dialog"), configDlg, nullptr, false);
+    setCommand(4, _T("Find(Docking) Dialog"), findDlg, nullptr, false);
 }
 
 //
@@ -127,5 +139,17 @@ void helloDlg()
 
 void testDlg()
 {
-    g_testDlg.doModal(&nppData,  NULL);
+    g_testDlg.doModal(&nppData,  nullptr);
+}
+
+void configDlg()
+{
+    g_configDlg.init((HINSTANCE)g_hModule, &nppData);
+    g_configDlg.doDialog();
+}
+
+void findDlg()
+{
+    g_findDlg.init((HINSTANCE)g_hModule, &nppData);
+    g_findDlg.showDialog();
 }

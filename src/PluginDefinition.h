@@ -29,7 +29,7 @@
 // Here define your plugin name
 
 //
-const TCHAR NPP_PLUGIN_NAME[] = _T("Notepad++插件模板");
+const TCHAR NPP_PLUGIN_NAME[] = _T("Notepad++ Plugin Template");
 
 //-----------------------------------------------//
 //-- STEP 2. DEFINE YOUR PLUGIN COMMAND NUMBER --//
@@ -37,7 +37,7 @@ const TCHAR NPP_PLUGIN_NAME[] = _T("Notepad++插件模板");
 //
 // Here define the number of your plugin commands
 //
-const int nbFunc = 3;
+const int nbFunc = 5;
 
 
 //
@@ -75,5 +75,7 @@ extern HANDLE g_hModule;
 void hello();
 void helloDlg();
 void testDlg();
+void configDlg();
+void findDlg();
 
 #endif //PLUGINDEFINITION_H
